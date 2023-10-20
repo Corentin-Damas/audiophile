@@ -3,7 +3,7 @@ import HomeProductGallery from "./HomeProductGallery"
 
 function  HomeContent(){
     return(
-        <div>
+        <div className="home-content">
             <VisualNav/>
             <HomeProductGallery/>
         </div>

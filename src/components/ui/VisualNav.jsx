@@ -23,7 +23,7 @@ function VisualNav() {
           alt=""
         />
         <h6>speakers</h6>
-        <NavLink to="/headphones">
+        <NavLink to="/speakers">
           <button className="btn-2">
             Shop <span className="arrow">&#129170;</span>
           </button>
@@ -36,7 +36,7 @@ function VisualNav() {
           alt=""
         />
         <h6>Earphones</h6>
-        <NavLink to="/headphones">
+        <NavLink to="/earphones">
           <button className="btn-2">
             Shop <span className="arrow">&#129170;</span>
           </button>

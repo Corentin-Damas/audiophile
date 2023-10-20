@@ -19,6 +19,12 @@ function Nav() {
           <li className="nav-link">
             <NavLink to="/headphones">headphones</NavLink>
           </li>
+          <li className="nav-link">
+            <NavLink to="/speakers">speakers</NavLink>
+          </li>
+          <li className="nav-link">
+            <NavLink to="/earphones">Earphones</NavLink>
+          </li>
         </ul>
         <h6>cart</h6>
       </nav>

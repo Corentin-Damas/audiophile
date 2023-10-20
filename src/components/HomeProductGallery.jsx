@@ -10,9 +10,19 @@ function HomeProductGallery(){
                 </div>
 
             </div>
-            <div className="home-display__p2"></div>
-            <div className="home-display__p3"></div>
-            <div className="home-display__p4"></div>
+            <div className="home-display__p2">
+                <h2>zx7 speaker</h2>
+                <button className="white">See product</button>
+                
+            </div>
+            <div className="home-display__p3">
+              <div className="home-display__p3-left"></div>
+              <div className="home-display__p3-right">
+                <h2>YX1 earphones</h2>
+                <button className="white">See product</button>
+              </div>
+
+            </div>
         </div>
     )
 }

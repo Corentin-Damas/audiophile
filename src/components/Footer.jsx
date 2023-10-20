@@ -33,6 +33,12 @@ function Footer() {
               <li className="nav-link">
                 <NavLink to="/headphones">headphones</NavLink>
               </li>
+              <li className="nav-link">
+                <NavLink to="/speakers">speakers</NavLink>
+              </li>
+              <li className="nav-link">
+                <NavLink to="/earphones">earphones</NavLink>
+              </li>
             </ul>
           </div>
           <div className="footer__right-socials">

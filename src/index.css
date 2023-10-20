@@ -3,6 +3,7 @@
 :root {
   --primary-color: #d87d4a;
   --primary-fade: #fbaf85;
+  --mid-grey: #979797;
   --grey: #f1f1f1;
   --white: #fff;
   --white-fade: #fafafa;
@@ -44,11 +45,11 @@ body {
   overflow-x: hidden;
 }
 .app-layout > * {
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   max-width: 110rem;
-  margin-inline:auto ;
+  margin-inline: auto;
 }
 
 /* === TYPOGRAPHY ===*/
@@ -214,19 +215,26 @@ nav {
   color: var(--white-fade);
 }
 
-
 /* --- VISUAL NAV --- */
 
+.home-content .visual__nav {
+  margin-top: 12rem;
+  margin-bottom: 12rem;
+}
+.product .visual__nav {
+  margin-top: 16rem;
+  margin-bottom: -4rem;
+}
+
 .visual__nav {
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  height: 57rem ;
-  
+  height: 28.4rem;
 }
-.visual__nav-box{
-  display:flex;
+.visual__nav-box {
+  display: flex;
   justify-content: end;
   padding-bottom: 3rem;
   align-items: center;
@@ -239,10 +247,9 @@ nav {
   border-radius: 1rem;
 }
 
-.visual__nav-img{
-
+.visual__nav-img {
   position: absolute;
-  top:0;
+  top: 0;
   left: 50%;
   transform: translate(-50%, -30%);
   max-width: fit-content;
@@ -251,13 +258,13 @@ nav {
 
 /* === HOME DISPLAY ===*/
 
-.home-display__p1{
-
-  display:flex;
+.home-display__p1 {
+  display: flex;
   justify-content: space-around;
   align-items: center;
   margin-inline: auto;
-  background-image: url(./assets/home/desktop/pattern-circles.svg), linear-gradient(to right, var(--primary-color), var(--primary-color)) ;
+  background-image: url(./assets/home/desktop/pattern-circles.svg),
+    linear-gradient(to right, var(--primary-color), var(--primary-color));
   background-repeat: no-repeat;
   background-position: -85% 0%;
   max-width: 111rem;
@@ -266,51 +273,131 @@ nav {
   border-radius: 2rem;
 }
 
-.home-display__p1-img{
+.home-display__p1-img {
   max-height: 49.3rem;
   transform: translateY(4.3rem);
   flex-basis: 50%;
   object-fit: contain;
-
 }
-.home-display__p1-right{
-  display:flex;
+.home-display__p1-right {
+  display: flex;
   justify-content: center;
   align-items: left;
   flex-direction: column;
   gap: 2rem;
-
 }
-
-.home-display__p1-text{
+.home-display__p1-text {
   max-width: 35rem;
 }
 
+.home-display__p2 {
+  margin-top: 4.8rem;
+  margin-inline: auto;
+  max-width: 111rem;
+  height: 32rem;
+  border-radius: 2rem;
+  background-image: url(./assets/home/desktop/image-speaker-zx7.jpg);
+  background-repeat: no-repeat;
+  filter: contrast(1.4) brightness(0.8);
 
-.best-gears{
-  display:flex;
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  padding-left: 14rem;
+  gap: 3.2rem;
+}
+.home-display__p3 {
+  margin-inline: auto;
+  height: 32rem;
+  max-width: 111rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.2rem;
+  margin-top: 4.8rem;
+}
+
+.home-display__p3-left,
+.home-display__p3-right {
+  background-repeat: no-repeat;
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 1rem;
+  width: 54rem;
+}
+.home-display__p3-left {
+  background-image: url(./assets/home/desktop/image-earphones-yx1.jpg);
+}
+
+.home-display__p3-right {
+  background-color: var(--mid-grey);
+  display: flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  padding-left: 9.5rem;
+  gap: 3.2rem;
+}
+
+.best-gears {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   padding-top: 20rem;
   padding-bottom: 20rem;
 }
 
-
-.best-gears__right{
+.best-gears__right {
   max-width: 58.8rem;
   border-radius: 1rem;
 }
-.best-gears__left{
+.best-gears__left {
   max-width: 44.5rem;
+}
+.best-gears__left-txt {
+  margin-top: 3.2rem;
+}
+
+/* ===== Product ===== */
+
+.product__container {
+  margin-top: 16rem;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 16rem;
+}
+
+.product__grid {
+  display: flex;
+  align-items: center;
+  gap:12.5rem
+}
+.product__info{
+  width: calc(110rem /2);
+  display:flex;
+  justify-content: center;
+  align-items: left;
+  flex-direction: column;
+  gap:3.2rem;
+}
+
+.product__img{
+  height: 56rem;
+  max-width: calc(110rem /2);
 
 }
-.best-gears__left-txt{
-  margin-top: 3.2rem ;
+.product__grid:nth-child(odd){
+  flex-direction: row-reverse;
 }
+
 
 
 /* --- Footer --- */
-footer{
+footer {
   background-color: var(--black-fade);
   width: 100vw;
 
@@ -319,42 +406,36 @@ footer{
 
 .footer-container {
   height: 100%;
-  display:flex;
+  display: flex;
   justify-content: space-between;
   align-items: top;
   padding-top: 7.5rem;
   padding-bottom: 4.8rem;
-
 }
 
-.footer__left{
-  display:flex;
+.footer__left {
+  display: flex;
   gap: 3.6rem;
   align-items: left;
   justify-content: space-between;
   flex-direction: column;
   flex-basis: 50%;
 }
-.footer__left-copyright{
 
+.footer__right {
+  display: flex;
+  justify-content: top;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 10.4rem;
 }
 
-.footer__right{
-display:flex;
-justify-content: top;
-align-items:flex-end;
-flex-direction: column;
-gap: 10.4rem;
-}
-
-.footer__right-socials{
-  display:flex;
+.footer__right-socials {
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap:1.4rem;
-
+  gap: 1.4rem;
 }
-
 
 /* === BUTTON ===*/
 
@@ -387,6 +468,7 @@ button.black {
 button.white {
   background-color: transparent;
   color: var(--black-fade);
+  border: 2px solid var(--black-fade);
 }
 
 button.orange:hover {
@@ -394,34 +476,29 @@ button.orange:hover {
 }
 button.white:hover {
   background-color: var(--black-fade);
+  color: var(--white);
 }
 
 .u-btn-blackbg {
   background-color: var(--black-fade);
 }
+.u-btn-blackbg:hover {
+  background-color: var(--white);
+}
 
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: 1px auto -webkit-focus-ring-color;
 }
 
-.btn-2{
+.btn-2 {
   background-color: transparent;
   color: var(--black-fade);
 }
-.btn-2:hover{
+.btn-2:hover {
   color: var(--primary-color);
 }
 /* === Utilities ===*/
-
-.header-container > *,
-.product__header > * ,
-.visual__nav,
-.best-gears ,
-footer>* {
-  max-width: 110rem;
-  margin-inline: auto;
-}
 
 .u-grey {
   color: var(--grey);
@@ -434,10 +511,19 @@ footer>* {
   color: var(--primary-color);
 }
 
-
-.social-icon{
+.social-icon {
   color: var(--white-fade);
 }
-.social-icon:hover{
+.social-icon:hover {
   color: var(--primary-color);
+}
+
+.header-container > *,
+.product__header > *,
+.visual__nav,
+.best-gears,
+.product__container,
+footer > * {
+  max-width: 110rem;
+  margin-inline: auto;
 }
