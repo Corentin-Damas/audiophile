@@ -5,6 +5,7 @@ import ProductItem from "./ProductItem";
 function ProductContent({ product }) {
   const data = useLoaderData();
 
+
   return (
     <div className="product__container">
       {data.map((item) => (

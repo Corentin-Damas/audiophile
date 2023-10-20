@@ -1,3 +1,5 @@
+import { NavLink } from "react-router-dom";
+
 function HomeHeader() {
   return (
     <div className="header__home">
@@ -10,10 +12,12 @@ function HomeHeader() {
         Experience natural, lifelike audio and exceptional build quality made
         for the passionate music enthusiast.
       </p>
+      <NavLink to="/xx99-mark-two-headphones">
 
       <button className="orange">
         See product
       </button>
+      </NavLink>
     </div>
   );
 }

@@ -26,7 +26,7 @@ function Nav() {
             <NavLink to="/earphones">Earphones</NavLink>
           </li>
         </ul>
-        <h6>cart</h6>
+        <h6 className="u-white">cart</h6>
       </nav>
       <hr />
     </>
