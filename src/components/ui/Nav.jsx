@@ -1,4 +1,5 @@
 import { NavLink } from "react-router-dom";
+import Cart from "./Cart";
 function Nav() {
   return (
     <>
@@ -26,7 +27,7 @@ function Nav() {
             <NavLink to="/earphones">Earphones</NavLink>
           </li>
         </ul>
-        <h6 className="u-white">cart</h6>
+        <Cart/>
       </nav>
       <hr />
     </>

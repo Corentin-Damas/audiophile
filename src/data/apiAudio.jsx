@@ -4,6 +4,6 @@ export async function getData() {
   const res = await fetch(`${API_URL}/data`);
   if (!res.ok) throw Error("Failed getting menu");
 
-  const  data  = await res.json();
+  const data = await res.json();
   return data;
 }

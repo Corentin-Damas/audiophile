@@ -1,6 +1,24 @@
+import { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function ProductFeatures({ dataProduct }) {
+  const [item, setItem] = useState(0);
+  const [btnMsg, setBtnMsg] = useState("Add to cart")
+
+  function handleSub() {
+    if (item > 0) {
+      setItem(item - 1);
+    }
+  }
+  function handleAdd() {
+    setItem(item + 1);
+  }
+  function addToCart(productId){
+      localStorage.setItem(productId, item)
+      setItem(1)
+      setBtnMsg("Product added to cart")
+  }
+
   return (
     <div className="productPage__container">
       <div className="productPage__cta">
@@ -16,13 +34,17 @@ function ProductFeatures({ dataProduct }) {
           </h4>
           <div className="cta__toadd">
             <div className="cta__calculator">
-              <button className="btn-math">-</button>
-              <p className="result u-bold">1</p>
+              <button className="btn-math" onClick={() => handleSub()}>
+                -
+              </button>
+              <p className="result u-bold">{item}</p>
 
-              <button className="btn-math">+</button>
+              <button className="btn-math" onClick={() => handleAdd()}>
+                +
+              </button>
             </div>
 
-            <button className="orange u-margin-left-16">Add to cart</button>
+            <button className="orange u-margin-left-16" onClick={()=>addToCart(dataProduct.id)}>{btnMsg}</button>
           </div>
         </div>
       </div>
@@ -59,19 +81,23 @@ function ProductFeatures({ dataProduct }) {
         />
       </div>
       <div className="productPage__recommendations">
-        <h2 className="productPage__recommendations-title">You may also like</h2>
+        <h2 className="productPage__recommendations-title">
+          You may also like
+        </h2>
         <div className="productPage__recommendations-row">
-
-        {dataProduct.others.map((el) => (
+          {dataProduct.others.map((el) => (
             <div className="productPage__recommendations-el">
-            <img className="productPage__recommendations-img" src={el.image.desktop} alt="" />
-            <h3>{el.name}</h3>
-            <NavLink to={`/${el.slug}`}>
-
-            <button className="orange">See Product</button>
-            </NavLink>
-          </div>
-        ))}
+              <img
+                className="productPage__recommendations-img"
+                src={el.image.desktop}
+                alt=""
+              />
+              <h3>{el.name}</h3>
+              <NavLink to={`/${el.slug}`}>
+                <button className="orange">See Product</button>
+              </NavLink>
+            </div>
+          ))}
         </div>
       </div>
     </div>
